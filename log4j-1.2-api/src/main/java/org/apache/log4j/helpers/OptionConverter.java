@@ -89,7 +89,7 @@ public class OptionConverter {
         new CharMap('\\', '\\')
     };
 
-    public static String[] concatanateArrays(final String[] l, final String[] r) {
+    public static String[] concatenateArrays(final String[] l, final String[] r) {
         final int len = l.length + r.length;
         final String[] a = new String[len];
 
