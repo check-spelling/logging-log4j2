@@ -96,7 +96,7 @@ public class RollingAppenderTempCompressedFilePatternTest {
                             } catch (final CompressorException ce) {
                                 ce.printStackTrace();
                                 fail(
-                                        "Error creating intput stream from " + file.toString() + ": " + ce.getMessage());
+                                        "Error creating input stream from " + file.toString() + ": " + ce.getMessage());
                             }
                         } else {
                             in = new FileInputStream(file);
