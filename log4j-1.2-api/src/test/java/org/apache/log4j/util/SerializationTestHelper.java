@@ -31,7 +31,7 @@ import java.io.ObjectOutputStream;
 import org.apache.commons.io.FileUtils;
 
 /**
- * Utiities for serialization tests.
+ * Utilities for serialization tests.
  */
 public class SerializationTestHelper {
     /**
