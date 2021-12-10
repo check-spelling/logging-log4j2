@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Test;
 @Tag("allocation")
 @Tag("functional")
 @Category(GarbageFree.class)
-public class GcFreeMixedSyncAyncLoggingTest {
+public class GcFreeMixedSyncAsyncLoggingTest {
 
     @Test
     public void testNoAllocationDuringSteadyStateLogging() throws Throwable {
@@ -43,6 +43,6 @@ public class GcFreeMixedSyncAyncLoggingTest {
     public static void main(final String[] args) throws Exception {
         System.setProperty(LoggingSystemProperties.THREAD_CONTEXT_GARBAGE_FREE_ENABLED, "true");
         System.setProperty("AsyncLoggerConfig.RingBufferSize", "128"); // minimum ringbuffer size
-        GcFreeLoggingTestUtil.executeLogging("gcFreeMixedSyncAsyncLogging.xml", GcFreeMixedSyncAyncLoggingTest.class);
+        GcFreeLoggingTestUtil.executeLogging("gcFreeMixedSyncAsyncLogging.xml", GcFreeMixedSyncAsyncLoggingTest.class);
     }
 }

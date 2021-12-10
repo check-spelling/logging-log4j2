@@ -43,7 +43,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *         else queue.add(event) // blocking call
  * </pre>
  */
-@LoggerContextSource("log4j-asynch-queue-full.xml")
+@LoggerContextSource("log4j-async-queue-full.xml")
 @Tag("sleepy")
 public class AsyncAppenderQueueFullPolicyTest {
 
