@@ -22,5 +22,5 @@
   <issue id="LOG4J2-933" link="https://issues.apache.org/jira/browse/LOG4J2-933"/>
   <author id="ggregory"/>
   <author name="ppiman"/>
-  <description format="asciidoc">HTML layout should not use attribute minimalization for hr noshade.</description>
+  <description format="asciidoc">HTML layout should not use attribute minimization for hr noshade.</description>
 </entry>
