@@ -174,7 +174,7 @@ public class FlumePersistentPerf {
             try {
                 server = createServer(this, port);
             } catch (InterruptedException ex) {
-                fail("Server creation was interrrupted");
+                fail("Server creation was interrupted");
             }
             server.start();
         }

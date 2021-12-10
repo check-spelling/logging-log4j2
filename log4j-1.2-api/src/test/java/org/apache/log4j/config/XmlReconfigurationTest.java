@@ -69,7 +69,7 @@ public class XmlReconfigurationTest {
             // Allow reconfiguration to complete.
             Thread.sleep(500);
         } catch (InterruptedException ie) {
-            fail("Reconfiguration interupted");
+            fail("Reconfiguration interrupted");
         }
         Configuration updated = context.getConfiguration();
         assertNotSame(original, updated, "Configurations are the same");

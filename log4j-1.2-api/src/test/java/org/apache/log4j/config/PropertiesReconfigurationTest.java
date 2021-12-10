@@ -212,7 +212,7 @@ public class PropertiesReconfigurationTest {
                 // Allow reconfiguration to complete.
                 Thread.sleep(500);
             } catch (final InterruptedException ie) {
-                fail("Reconfiguration interupted");
+                fail("Reconfiguration interrupted");
             }
             final Configuration updated = context.getConfiguration();
             assertNotSame(original, updated, "Configurations are the same");
