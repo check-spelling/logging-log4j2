@@ -98,14 +98,14 @@ public class JsonLayoutTest {
     Logger rootLogger = this.ctx.getRootLogger();
 
     private void checkAt(final String expected, final int lineIndex, final List<String> list) {
-        final String trimedLine = list.get(lineIndex).trim();
-        assertEquals(trimedLine, expected, "Incorrect line index " + lineIndex + ": " + Strings.dquote(trimedLine));
+        final String trimmedLine = list.get(lineIndex).trim();
+        assertEquals(trimmedLine, expected, "Incorrect line index " + lineIndex + ": " + Strings.dquote(trimmedLine));
     }
 
     private void checkContains(final String expected, final List<String> list) {
         for (final String string : list) {
-            final String trimedLine = string.trim();
-            if (trimedLine.equals(expected)) {
+            final String trimmedLine = string.trim();
+            if (trimmedLine.equals(expected)) {
                 return;
             }
         }
