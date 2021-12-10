@@ -126,7 +126,7 @@ public final class Rfc5424Layout extends AbstractStringLayout {
     private final boolean useTlsMessageFormat;
 
     private long lastTimestamp = -1;
-    private String timestamppStr;
+    private String timestampStr;
 
     private final List<PatternFormatter> exceptionFormatters;
     private final Map<String, FieldFormatter> fieldFormatters;
@@ -456,7 +456,7 @@ public final class Rfc5424Layout extends AbstractStringLayout {
         synchronized (this) {
             last = lastTimestamp;
             if (now == lastTimestamp) {
-                return timestamppStr;
+                return timestampStr;
             }
         }
 
@@ -496,7 +496,7 @@ public final class Rfc5424Layout extends AbstractStringLayout {
         synchronized (this) {
             if (last == lastTimestamp) {
                 lastTimestamp = now;
-                timestamppStr = buffer.toString();
+                timestampStr = buffer.toString();
             }
         }
         return buffer.toString();
