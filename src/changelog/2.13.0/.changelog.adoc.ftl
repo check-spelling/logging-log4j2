@@ -22,7 +22,7 @@ Some of the new features in this release are:
 
 * Log4j 2 now requires Java 8 or higher to build and run.
 * Experimental support for Log4j 1 configuration files.
-See Log4j 2 Compatiblity with Log4j 1.
+See Log4j 2 Compatibility with Log4j 1.
 * The Logger API has been enhanced to support a builder pattern.
 This can dramatically improve the overhead of capturing location information.
 See Log Builder.
