@@ -334,19 +334,19 @@ public class PropertiesConfiguration extends Log4j1Configuration {
     // --------------------------------------------------------------------------
 
     private void configureRoot(final Properties props) {
-        String effectiveFrefix = ROOT_LOGGER_PREFIX;
+        String effectivePrefix = ROOT_LOGGER_PREFIX;
         String value = OptionConverter.findAndSubst(ROOT_LOGGER_PREFIX, props);
 
         if (value == null) {
             value = OptionConverter.findAndSubst(ROOT_CATEGORY_PREFIX, props);
-            effectiveFrefix = ROOT_CATEGORY_PREFIX;
+            effectivePrefix = ROOT_CATEGORY_PREFIX;
         }
 
         if (value == null) {
             LOGGER.debug("Could not find root logger information. Is this OK?");
         } else {
             final LoggerConfig root = getRootLogger();
-            parseLogger(props, root, effectiveFrefix, INTERNAL_ROOT_NAME, value);
+            parseLogger(props, root, effectivePrefix, INTERNAL_ROOT_NAME, value);
         }
     }
 
