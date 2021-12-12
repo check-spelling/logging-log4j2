@@ -38,7 +38,7 @@ public interface Parser<T> extends Builder<T> {
     T parse(Element element, XmlConfiguration config);
 
     /**
-     * Parses a PropertiesConfigurationt.
+     * Parses a PropertiesConfiguration.
      * 
      * @param element the PropertiesConfiguration.
      * @return parse result.
