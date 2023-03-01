@@ -108,7 +108,7 @@ public class RollingFileAppender extends FileAppender {
      * created.
      * </p>
      */
-    public // synchronization not necessary since doAppend is alreasy synched
+    public // synchronization not necessary since doAppend is already synched
     void rollOver() {
         File target;
         File file;
