@@ -130,7 +130,7 @@ public class HierarchyDynamicMBean extends AbstractDynamicMBean implements Hiera
         final Constructor[] constructors = this.getClass().getConstructors();
         dConstructors[0] = new MBeanConstructorInfo("HierarchyDynamicMBean(): Constructs a HierarchyDynamicMBean instance", constructors[0]);
 
-        vAttributes.add(new MBeanAttributeInfo(THRESHOLD, "java.lang.String", "The \"threshold\" state of the hiearchy.", true, true, false));
+        vAttributes.add(new MBeanAttributeInfo(THRESHOLD, "java.lang.String", "The \"threshold\" state of the hierarchy.", true, true, false));
 
         final MBeanParameterInfo[] params = new MBeanParameterInfo[1];
         params[0] = new MBeanParameterInfo("name", "java.lang.String", "Create a logger MBean");

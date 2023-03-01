@@ -235,7 +235,7 @@ public class Category implements AppenderAttachable {
     }
 
     /**
-     * Call the appenders in the hierrachy starting at <code>this</code>. If no appenders could be found, emit a warning.
+     * Call the appenders in the hierarchy starting at <code>this</code>. If no appenders could be found, emit a warning.
      * <p>
      * This method calls all the appenders inherited from the hierarchy circumventing any evaluation of whether to log or
      * not to log the particular log request.
@@ -674,7 +674,7 @@ public class Category implements AppenderAttachable {
     }
 
     /**
-     * Only the Hiearchy class can set the hiearchy of a category. Default package access is MANDATORY here.
+     * Only the Hierarchy class can set the hierarchy of a category. Default package access is MANDATORY here.
      */
     final void setHierarchy(final LoggerRepository repository) {
         this.repository = repository;

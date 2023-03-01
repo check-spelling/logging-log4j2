@@ -368,7 +368,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Deprecated
     public void overrideAsNeeded(final String override) {
-        LogLog.warn("The Hiearchy.overrideAsNeeded method has been deprecated.");
+        LogLog.warn("The Hierarchy.overrideAsNeeded method has been deprecated.");
     }
 
     /**
@@ -427,7 +427,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Deprecated
     public void setDisableOverride(final String override) {
-        LogLog.warn("The Hiearchy.setDisableOverride method has been deprecated.");
+        LogLog.warn("The Hierarchy.setDisableOverride method has been deprecated.");
     }
 
     /**

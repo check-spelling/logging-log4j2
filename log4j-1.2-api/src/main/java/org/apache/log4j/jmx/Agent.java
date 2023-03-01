@@ -118,7 +118,7 @@ public class Agent {
             server.registerMBean(html, new ObjectName("Adaptor:name=html,port=8082"));
             log.info("Registering HierarchyDynamicMBean instance.");
             final HierarchyDynamicMBean hdm = new HierarchyDynamicMBean();
-            server.registerMBean(hdm, new ObjectName("log4j:hiearchy=default"));
+            server.registerMBean(hdm, new ObjectName("log4j:hierarchy=default"));
         } catch (final JMException e) {
             log.error("Problem while registering MBeans instances.", e);
             return;
