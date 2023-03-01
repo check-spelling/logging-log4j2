@@ -83,7 +83,7 @@ public class RollingAppenderCronAndSizeLookupTest {
             if (previous.length() == 0) {
                 previous = actual;
             } else {
-                assertNotSame("File names snould not be equal", previous, actual);
+                assertNotSame("File names should not be equal", previous, actual);
             }
         }
 
