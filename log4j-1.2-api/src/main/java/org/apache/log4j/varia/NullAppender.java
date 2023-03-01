@@ -28,7 +28,7 @@ public class NullAppender extends AppenderSkeleton {
     private static final NullAppender INSTANCE = new NullAppender();
 
     /**
-     * Whenever you can, use this method to retreive an instance instead of instantiating a new one with <code>new</code>.
+     * Whenever you can, use this method to retrieve an instance instead of instantiating a new one with <code>new</code>.
      */
     public static NullAppender getNullAppender() {
         return INSTANCE;
@@ -68,7 +68,7 @@ public class NullAppender extends AppenderSkeleton {
     }
 
     /**
-     * Whenever you can, use this method to retreive an instance instead of instantiating a new one with <code>new</code>.
+     * Whenever you can, use this method to retrieve an instance instead of instantiating a new one with <code>new</code>.
      *
      * @deprecated Use getNullAppender instead. getInstance should have been static.
      */
