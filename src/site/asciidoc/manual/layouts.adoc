@@ -238,7 +238,7 @@ are also specified this attribute will be ignored.
 
 |mapMessageIncludes
 |String
-|A comma separated list of attributes from the MapMessageto include when formatting the event. This
+|A comma separated list of attributes from the MapMessage to include when formatting the event. This
 attribute only applies when includeMapMessage="true" is specified. If mapMessageExcludes
 are also specified this attribute will override them. MapMessage fields specified here that
 have no value will be omitted.
