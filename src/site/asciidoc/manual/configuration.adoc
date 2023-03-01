@@ -139,7 +139,7 @@ If no Arbiter returns true a DefaultArbiter may be configured with the default c
 The DefaultArbiter is an Arbiter that always returns true, so using it outside of a Select would result in
 its configured elements always being included just as if it hadn't been present.
 
-This example shows an Arbiter that uses Javascript residing in a separate file to determine whether to
+This example shows an Arbiter that uses JavaScript residing in a separate file to determine whether to
 include the Console Appender. If the result is false then a List Appender will be included.
 
 [source,xml]
@@ -1448,7 +1448,7 @@ interval will be used to check for changes in the file.
   <Scripts>
     <Script name="selector" language="javascript"><![CDATA[
             var result;
-            if (logEvent.getLoggerName().equals("JavascriptNoLocation")) {
+            if (logEvent.getLoggerName().equals("JavaScriptNoLocation")) {
                 result = "NoLocation";
             } else if (logEvent.getMarker() != null && logEvent.getMarker().isInstanceOf("FLOW")) {
                 result = "Flow";
@@ -1521,15 +1521,15 @@ for the list of variables that are available to the script.
 
 The components that support scripting expect a return value to be passed
 back to the calling Java code. This is not a problem for several of the
-scripting languages, but Javascript does not allow a return statement
-unless it is within a function. However, Javascript will return the
+scripting languages, but JavaScript does not allow a return statement
+unless it is within a function. However, JavaScript will return the
 value of the last statement executed in the script. As a consequence,
 code such as that shown below will result in the desired behavior.
 
 [source,javascript]
 ----
 var result;
-if (logEvent.getLoggerName().equals("JavascriptNoLocation")) {
+if (logEvent.getLoggerName().equals("JavaScriptNoLocation")) {
     result = "NoLocation";
 } else if (logEvent.getMarker() != null && logEvent.getMarker().isInstanceOf("FLOW")) {
     result = "Flow";

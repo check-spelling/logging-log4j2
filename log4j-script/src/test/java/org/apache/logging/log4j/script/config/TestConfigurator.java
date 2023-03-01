@@ -39,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * Test Configuration
  */
-@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "beanshell, Groovy, Javascript")
+@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "beanshell, Groovy, JavaScript")
 public class TestConfigurator {
     @Test
     public void testBuilderWithScripts() throws Exception {

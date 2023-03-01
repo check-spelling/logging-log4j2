@@ -55,7 +55,7 @@ public abstract class AbstractScriptFilterTest {
 
     @Test
     @DisabledForJreRange(min = JRE.JAVA_15, disabledReason = "JEP 372: Remove the Nashorn JavaScript Engine")
-    public void testJavascriptFilter(final LoggerContext context, @Named("List") final ListAppender app) throws Exception {
+    public void testJavaScriptFilter(final LoggerContext context, @Named("List") final ListAppender app) throws Exception {
         final Logger logger = context.getLogger("TestJavaScriptFilter");
         logger.traceEntry();
         logger.info("This should not be logged");

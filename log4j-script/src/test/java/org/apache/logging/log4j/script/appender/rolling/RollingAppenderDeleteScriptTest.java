@@ -41,7 +41,7 @@ public class RollingAppenderDeleteScriptTest {
 
     @BeforeClass
     public static void beforeClass() {
-        System.setProperty(ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, "Groovy, Javascript");
+        System.setProperty(ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, "Groovy, JavaScript");
     }
 
     @Rule
