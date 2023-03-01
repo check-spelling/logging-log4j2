@@ -39,7 +39,7 @@ import org.apache.log4j.spi.ErrorCode;
 public class FileAppender extends WriterAppender {
 
     /**
-     * Controls file truncatation. The default value for this variable is <code>true</code>, meaning that by default a
+     * Controls file truncation. The default value for this variable is <code>true</code>, meaning that by default a
      * <code>FileAppender</code> will append to an existing file and not truncate it.
      * <p>
      * This option is meaningful only if the FileAppender opens the file.
