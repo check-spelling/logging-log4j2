@@ -39,7 +39,7 @@ public class NullAppender extends AppenderSkeleton {
     }
 
     /**
-     * There are no options to acticate.
+     * There are no options to activate.
      */
     @Override
     public void activateOptions() {
