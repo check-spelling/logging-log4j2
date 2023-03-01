@@ -157,7 +157,7 @@ public abstract class AbstractDynamicMBean implements DynamicMBean, MBeanRegistr
             return resultList;
         }
 
-        // for each attribute, try to set it and add to the result list if successfull
+        // for each attribute, try to set it and add to the result list if successful
         for (final Object attribute : attributes) {
             final Attribute attr = (Attribute) attribute;
             try {
