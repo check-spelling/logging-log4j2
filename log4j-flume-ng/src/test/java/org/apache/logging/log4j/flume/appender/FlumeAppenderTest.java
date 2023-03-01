@@ -376,7 +376,7 @@ public class FlumeAppenderTest {
         try {
             avroLogger.info("message 1");
         } catch (final Throwable t) {
-            // logger.debug("Logging to a non-existent server failed (as expected)",
+            // logger.debug("Logging to a nonexistent server failed (as expected)",
             // t);
 
             caughtException = true;

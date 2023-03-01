@@ -38,7 +38,7 @@ public class Log4j1Configuration extends AbstractConfiguration implements Reconf
     public static final String NULL = "null";
 
     /**
-     * The effective level used, when the configuration uses a non-existent custom
+     * The effective level used, when the configuration uses a nonexistent custom
      * level.
      */
     public static final Level DEFAULT_LEVEL = Level.DEBUG;

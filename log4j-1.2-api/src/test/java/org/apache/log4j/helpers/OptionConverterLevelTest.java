@@ -116,7 +116,7 @@ public class OptionConverterLevelTest {
         assertEquals(expectedLevel, v1Level.toInt());
         // convertLevel
         assertEquals(v1Level, OptionConverter.convertLevel(v2Level));
-        // Non-existent level
+        // Nonexistent level
         assertNull(OptionConverter.toLevel("WARN_INFO#" + org.apache.logging.log4j.Level.class.getName(), null));
     }
 
