@@ -202,8 +202,8 @@ public class HtmlLayoutTest {
         MyLogEvent event = new MyLogEvent();
         String actual = getDateLine(layout.toSerializable(event));
 
-        long jvmStratTime = ManagementFactory.getRuntimeMXBean().getStartTime();
-        assertEquals("<td>" + (event.getTimeMillis() - jvmStratTime) + "</td>", actual, "Incorrect date:" + actual);
+        long jvmStartTime = ManagementFactory.getRuntimeMXBean().getStartTime();
+        assertEquals("<td>" + (event.getTimeMillis() - jvmStartTime) + "</td>", actual, "Incorrect date:" + actual);
     }
 
     @Test
@@ -213,8 +213,8 @@ public class HtmlLayoutTest {
         MyLogEvent event = new MyLogEvent();
         String actual = getDateLine(layout.toSerializable(event));
 
-        long jvmStratTime = ManagementFactory.getRuntimeMXBean().getStartTime();
-        assertEquals("<td>" + (event.getTimeMillis() - jvmStratTime) + "</td>", actual, "Incorrect date:" + actual);
+        long jvmStartTime = ManagementFactory.getRuntimeMXBean().getStartTime();
+        assertEquals("<td>" + (event.getTimeMillis() - jvmStartTime) + "</td>", actual, "Incorrect date:" + actual);
     }
 
     @Test
