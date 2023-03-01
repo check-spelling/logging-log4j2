@@ -134,7 +134,7 @@ public class RollingAppenderTempCompressedFilePatternTest {
             }
             assertTrue(temporaryFilesCreated > 0, "No temporary file created during compression");
             assertEquals(gzippedFiles, temporaryFilesCreated,
-                    "Temporarys file created not equals to compressed files " + temporaryFilesCreated + "/"
+                    "Temporary file created not equals to compressed files " + temporaryFilesCreated + "/"
                             + gzippedFiles);
         }
     }
