@@ -38,7 +38,7 @@ import org.apache.log4j.spi.LoggingEvent;
  * <p>
  * If <code>LevelMin</code>w is not defined, then there is no minimum acceptable level (ie a level is never rejected for
  * being too "low"/unimportant). If <code>LevelMax</code> is not defined, then there is no maximum acceptable level (ie
- * a level is never rejected for beeing too "high"/important).
+ * a level is never rejected for being too "high"/important).
  * </p>
  * <p>
  * Refer to the {@link org.apache.log4j.AppenderSkeleton#setThreshold setThreshold} method available to <code>all</code>
