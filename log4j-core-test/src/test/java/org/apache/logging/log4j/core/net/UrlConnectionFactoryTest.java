@@ -98,7 +98,7 @@ public class UrlConnectionFactoryTest {
     }
 
     @Test
-    public void testBadCrdentials() throws Exception {
+    public void testBadCredentials() throws Exception {
         System.setProperty("log4j2.Configuration.username", "foo");
         System.setProperty("log4j2.Configuration.password", "bar");
         System.setProperty("log4j2.Configuration.allowedProtocols", "http");
