@@ -70,9 +70,9 @@ public class DatePatternConverterTest {
     private static final String ISO8601 = FixedDateFormat.FixedFormat.ISO8601.name();
 
     /**
-     * ISO8601_OFFSE_DATE_TIME_XX string literal.
+     * ISO8601_OFFSET_DATE_TIME_XX string literal.
      */
-    private static final String ISO8601_OFFSE_DATE_TIME_HHMM = FixedDateFormat.FixedFormat.ISO8601_OFFSET_DATE_TIME_HHMM
+    private static final String ISO8601_OFFSET_DATE_TIME_HHMM = FixedDateFormat.FixedFormat.ISO8601_OFFSET_DATE_TIME_HHMM
             .name();
 
     /**
@@ -229,7 +229,7 @@ public class DatePatternConverterTest {
     @Test
     public void testFormatLogEventStringBuilderIso8601TimezoneOffsetHHMM() {
         final LogEvent event = new MyLogEvent();
-        final String[] optionsWithTimezone = { ISO8601_OFFSE_DATE_TIME_HHMM };
+        final String[] optionsWithTimezone = { ISO8601_OFFSET_DATE_TIME_HHMM };
         final DatePatternConverter converter = DatePatternConverter.newInstance(optionsWithTimezone);
         final StringBuilder sb = new StringBuilder();
         converter.format(event, sb);
