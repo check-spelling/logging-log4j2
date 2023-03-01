@@ -80,7 +80,7 @@ public class Loader {
         }
 
         // Last ditch attempt: get the resource from the class path. It
-        // may be the case that clazz was loaded by the Extentsion class
+        // may be the case that clazz was loaded by the Extension class
         // loader which the parent of the system class loader. Hence the
         // code below.
         LogLog.debug("Trying to find [" + resource + "] using ClassLoader.getSystemResource().");
