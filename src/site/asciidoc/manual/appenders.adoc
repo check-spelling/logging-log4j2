@@ -2700,7 +2700,7 @@ occur based on the time pattern and a `modulate` boolean attribute.
 |Parameter Name |Type |Description
 |interval |integer |How often a rollover should occur based on the most
 specific time unit in the date pattern. For example, with a date pattern
-with hours as the most specific item and and increment of 4 rollovers
+with hours as the most specific item and increment of 4 rollovers
 would occur every 4 hours. The default value is 1.
 
 |modulate |boolean |Indicates whether the interval should be adjusted to
