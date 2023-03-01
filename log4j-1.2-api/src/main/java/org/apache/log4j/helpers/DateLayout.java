@@ -111,7 +111,7 @@ abstract public class DateLayout extends Layout {
 
     /**
      * The value of the <b>DateFormat</b> option should be either an argument to the constructor of {@link SimpleDateFormat}
-     * or one of the srings "NULL", "RELATIVE", "ABSOLUTE", "DATE" or "ISO8601.
+     * or one of the strings "NULL", "RELATIVE", "ABSOLUTE", "DATE" or "ISO8601.
      */
     public void setDateFormat(final String dateFormat) {
         if (dateFormat != null) {
