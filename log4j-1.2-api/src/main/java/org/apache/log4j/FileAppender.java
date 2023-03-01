@@ -158,7 +158,7 @@ public class FileAppender extends WriterAppender {
      * Get the value of the <b>BufferedIO</b> option.
      * 
      * <p>
-     * BufferedIO will significatnly increase performance on heavily loaded systems.
+     * BufferedIO will significantly increase performance on heavily loaded systems.
      * </p>
      */
     public boolean getBufferedIO() {
@@ -203,7 +203,7 @@ public class FileAppender extends WriterAppender {
      * The <b>BufferedIO</b> option takes a boolean value. It is set to <code>false</code> by default. If true, then
      * <code>File</code> will be opened and the resulting {@link java.io.Writer} wrapped around a {@link BufferedWriter}.
      * 
-     * BufferedIO will significatnly increase performance on heavily loaded systems.
+     * BufferedIO will significantly increase performance on heavily loaded systems.
      * 
      */
     public void setBufferedIO(boolean bufferedIO) {
