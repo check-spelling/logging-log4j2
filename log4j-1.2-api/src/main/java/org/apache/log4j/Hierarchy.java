@@ -356,7 +356,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
 
     /**
      * This method will return <code>true</code> if this repository is disabled for <code>level</code> object passed as
-     * parameter and <code>false</code> otherwise. See also the {@link #setThreshold(Level) threshold} emthod.
+     * parameter and <code>false</code> otherwise. See also the {@link #setThreshold(Level) threshold} method.
      */
     @Override
     public boolean isDisabled(final int level) {
