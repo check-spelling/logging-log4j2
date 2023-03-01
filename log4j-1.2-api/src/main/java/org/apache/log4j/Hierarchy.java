@@ -256,7 +256,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Override
     public Enumeration getCurrentLoggers() {
-        // The accumlation in v is necessary because not all elements in
+        // The accumulation in v is necessary because not all elements in
         // ht are Logger objects as there might be some ProvisionNodes
         // as well.
 //        final Vector v = new Vector(ht.size());
