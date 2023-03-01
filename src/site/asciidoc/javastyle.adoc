@@ -851,7 +851,7 @@ disregarded. Examples:
 |"inner stopwatch" |`innerStopwatch` |`innerStopWatch`
 |"supports IPv6 on iOS?" |`supportsIpv6OnIos` |`supportsIPv6OnIOS`
 |"YouTube importer" |`YouTubeImporter` +
-`YoutubeImporter`* |
+`YouTubeImporter`* |
 |=================================================================
 
 *Acceptable, but not recommended.
