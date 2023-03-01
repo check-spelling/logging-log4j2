@@ -519,7 +519,7 @@ public class PropertyConfigurator implements Configurator {
             }
         }
 
-        // sort filters by IDs, insantiate filters, set filter options,
+        // sort filters by IDs, instantiate filters, set filter options,
         // add filters to the appender
         final Enumeration g = new SortedKeyEnumeration(filters);
         Filter head = null;
