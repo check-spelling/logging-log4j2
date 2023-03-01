@@ -90,7 +90,7 @@ public class Log4jBridgeHandlerTest {
         System.out.println("sysout:  logging-cfg-file:  " + System.getProperty("java.util.logging.config.file"));
         if (DEVTEST)  devTestBeforeClass();    // call before stderr capturing
 
-        // JUL does not like setting stderr inbetween, so set it once and reset collecting stream
+        // JUL does not like setting stderr in between, so set it once and reset collecting stream
         // for each method; (thus com.github.stefanbirkner:system-rules:SystemErrRule cannot be used)
         System.err.println("vvv--- BEGIN capturing output to stderr ---vvv"
                 + "   (do output of captured text to orig. stderr: " + OUTPUT_CAPTURED + ")");
