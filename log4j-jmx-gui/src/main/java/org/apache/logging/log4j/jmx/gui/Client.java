@@ -178,8 +178,8 @@ public class Client {
         if (!isLoggerContext(loggerContextObjName)) {
             throw new IllegalArgumentException("Not a LoggerContext: " + loggerContextObjName);
         }
-        final String cxtName = loggerContextObjName.getKeyProperty("type");
-        final String name = String.format(StatusLoggerAdminMBean.PATTERN, cxtName);
+        final String ctxName = loggerContextObjName.getKeyProperty("type");
+        final String name = String.format(StatusLoggerAdminMBean.PATTERN, ctxName);
         try {
             return new ObjectName(name);
         } catch (final MalformedObjectNameException ex) {
