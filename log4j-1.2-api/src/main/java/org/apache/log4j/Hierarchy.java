@@ -573,7 +573,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
 
         // System.out.println("UpdateParents called for " + name);
 
-        // if name = "w.x.y.z", loop thourgh "w.x.y", "w.x" and "w", but not "w.x.y.z"
+        // if name = "w.x.y.z", loop through "w.x.y", "w.x" and "w", but not "w.x.y.z"
         for (int i = name.lastIndexOf('.', length - 1); i >= 0; i = name.lastIndexOf('.', i - 1)) {
             final String substr = name.substring(0, i);
 
