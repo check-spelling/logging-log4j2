@@ -18,7 +18,7 @@
 
 There are two possibilities:
 - Logging Adapter as complete replacement (preferred, but requires JVM start option)
-- Bridge Handler, transfering JDK output to log4j, e.g. useful for webapps
+- Bridge Handler, transferring JDK output to log4j, e.g. useful for webapps
 
 # Log4j JDK Logging Adapter
 
