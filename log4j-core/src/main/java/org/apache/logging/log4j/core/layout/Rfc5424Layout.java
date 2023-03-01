@@ -637,7 +637,7 @@ public final class Rfc5424Layout extends AbstractStringLayout {
             @PluginConfiguration final Configuration config) {
         // @formatter:on
         if (includes != null && excludes != null) {
-            LOGGER.error("mdcIncludes and mdcExcludes are mutually exclusive. Includes wil be ignored");
+            LOGGER.error("mdcIncludes and mdcExcludes are mutually exclusive. Includes will be ignored");
             includes = null;
         }
 
@@ -764,7 +764,7 @@ public final class Rfc5424Layout extends AbstractStringLayout {
 
         public Rfc5424Layout build() {
             if (includes != null && excludes != null) {
-                LOGGER.error("mdcIncludes and mdcExcludes are mutually exclusive. Includes wil be ignored");
+                LOGGER.error("mdcIncludes and mdcExcludes are mutually exclusive. Includes will be ignored");
                 includes = null;
             }
 
