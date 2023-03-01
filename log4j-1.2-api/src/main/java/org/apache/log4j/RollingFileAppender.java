@@ -56,7 +56,7 @@ public class RollingFileAppender extends FileAppender {
 
     /**
      * Constructs a RollingFileAppender and open the file designated by <code>filename</code>. The opened filename will
-     * become the ouput destination for this appender.
+     * become the output destination for this appender.
      * 
      * <p>
      * If the <code>append</code> parameter is true, the file will be appended to. Otherwise, the file designated by
