@@ -29,3 +29,4 @@ felix-cache/
 target/
 .toDelete
 velocity.log
+.github/actions/spelling/*
