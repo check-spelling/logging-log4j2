@@ -21,7 +21,7 @@ import org.apache.log4j.spi.LoggingEvent;
 
 /**
 
-   <p>PatternConverter is an abtract class that provides the
+   <p>PatternConverter is an abstract class that provides the
    formatting functionality that derived classes need.
 
    <p>Conversion specifiers in a conversion patterns are parsed to
