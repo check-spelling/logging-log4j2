@@ -20,7 +20,7 @@ package org.apache.log4j.pattern;
 import junit.framework.TestCase;
 
 /**
- * Tests for NameAbbrevator.
+ * Tests for NameAbbreviator.
  *
  */
 public class NameAbbreviatorTest extends TestCase {
