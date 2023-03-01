@@ -59,7 +59,7 @@ public class RollingFileAppender extends FileAppender {
      * become the ouput destination for this appender.
      * 
      * <p>
-     * If the <code>append</code> parameter is true, the file will be appended to. Otherwise, the file desginated by
+     * If the <code>append</code> parameter is true, the file will be appended to. Otherwise, the file designated by
      * <code>filename</code> will be truncated before being opened.
      * </p>
      */
