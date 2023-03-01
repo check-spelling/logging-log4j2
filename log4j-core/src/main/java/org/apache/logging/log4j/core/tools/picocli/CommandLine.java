@@ -2355,7 +2355,7 @@ public class CommandLine {
         private void checkMaxArityExceeded(final Range arity, final int remainder, final Field field, final String[] values) {
             if (values.length <= remainder) { return; }
             final String desc = arity.max == remainder ? "" + remainder : arity + ", remainder=" + remainder;
-            throw new MaxValuesforFieldExceededException(CommandLine.this, optionDescription("", field, -1) +
+            throw new MaxValuesForFieldExceededException(CommandLine.this, optionDescription("", field, -1) +
                     " max number of values (" + arity.max + ") exceeded: remainder is " + remainder + " but " +
                     values.length + " values were specified: " + Arrays.toString(values));
         }
@@ -4800,9 +4800,9 @@ public class CommandLine {
         public UnmatchedArgumentException(final CommandLine commandLine, final List<String> args) { this(commandLine, "Unmatched argument" + (args.size() == 1 ? " " : "s ") + args); }
     }
     /** Exception indicating that more values were specified for an option or parameter than its {@link Option#arity() arity} allows. */
-    public static class MaxValuesforFieldExceededException extends ParameterException {
+    public static class MaxValuesForFieldExceededException extends ParameterException {
         private static final long serialVersionUID = 6536145439570100641L;
-        public MaxValuesforFieldExceededException(final CommandLine commandLine, final String msg) { super(commandLine, msg); }
+        public MaxValuesForFieldExceededException(final CommandLine commandLine, final String msg) { super(commandLine, msg); }
     }
     /** Exception indicating that an option for a single-value option field has been specified multiple times on the command line. */
     public static class OverwrittenOptionException extends ParameterException {
