@@ -59,12 +59,12 @@ public class LevelMatchFilter extends Filter {
             return Filter.NEUTRAL;
         }
 
-        boolean matchOccured = false;
+        boolean matchOccurred = false;
         if (this.levelToMatch.equals(event.getLevel())) {
-            matchOccured = true;
+            matchOccurred = true;
         }
 
-        if (matchOccured) {
+        if (matchOccurred) {
             if (this.acceptOnMatch) {
                 return Filter.ACCEPT;
             }
