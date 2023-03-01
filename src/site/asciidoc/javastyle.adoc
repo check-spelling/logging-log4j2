@@ -158,7 +158,7 @@ The package statement is *not line-wrapped*. The column limit
 
 *Wildcard imports*, static or otherwise, *are not used*.
 
-[#static-wildcart-imports]
+[#static-wildcard-imports]
 ==== Static wildcard imports in the test tree
 
 *Wildcard static imports* are encouraged for test imports like JUnit,
