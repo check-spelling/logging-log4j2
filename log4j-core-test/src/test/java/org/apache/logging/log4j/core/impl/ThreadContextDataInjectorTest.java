@@ -57,7 +57,7 @@ public class ThreadContextDataInjectorTest {
     public String threadContextMapClassName;
 
     @Parameter(value = 1)
-    public String readOnlythreadContextMapClassName;
+    public String readOnlyThreadContextMapClassName;
 
     @Before
     public void before() {
@@ -73,10 +73,10 @@ public class ThreadContextDataInjectorTest {
     }
 
     private void testContextDataInjector() {
-        ReadOnlyThreadContextMap readOnlythreadContextMap = getThreadContextMap();
+        ReadOnlyThreadContextMap readOnlyThreadContextMap = getThreadContextMap();
         assertThat("thread context map class name",
-                   (readOnlythreadContextMap == null) ? null : readOnlythreadContextMap.getClass().getName(),
-                   is(equalTo(readOnlythreadContextMapClassName)));
+                   (readOnlyThreadContextMap == null) ? null : readOnlyThreadContextMap.getClass().getName(),
+                   is(equalTo(readOnlyThreadContextMapClassName)));
 
         ContextDataInjector contextDataInjector = createInjector();
         StringMap stringMap = contextDataInjector.injectContextData(null, new SortedArrayStringMap());
