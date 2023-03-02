@@ -67,17 +67,14 @@ jobs:
       # `clean verify artifact:compare` is required to generate the build reproducibility report.
       # For details, see: https://maven.apache.org/guides/mini/guide-reproducible-builds.html#how-to-test-my-maven-build-reproducibility
       - name: Report build reproducibility
+        id: report-reproducible
         timeout-minutes: 10
         shell: bash
         run: |
           ./mvnw \
             --show-version --batch-mode --errors --no-transfer-progress \
             -DskipTests=true \
-            clean verify artifact:compare
-
-      - name: Verify build reproducibility
-        shell: bash
-        run: |
+            clean verify artifact:compare || true
           for report_file in target/*.buildcompare **/target/*.buildcompare; do
             if ! grep -q "^ko=0$" "$report_file"; then
               echo "Spotted build reproducibility failure in \`$report_file\`:"
@@ -86,6 +83,24 @@ jobs:
             fi
           done
 
+      - name: Reports for report build reproducibility
+        if: failure() && steps.report-reproducible.outcome == 'failure'
+        uses: actions/upload-artifact@v3
+        with:
+          name: target-artifacts-${matrix.os}
+          path: "**/target/*.buildcompare"
+      - name: Artifacts for report build reproducibility
+        if: failure() && steps.report-reproducible.outcome == 'failure'
+        uses: actions/upload-artifact@v3
+        with:
+          name: target-artifacts-${matrix.os}
+          path: "*/target/*.jar"
+      - name: Artifacts for report build reproducibility
+        if: failure() && steps.report-reproducible.outcome == 'failure'
+        uses: actions/upload-artifact@v3
+        with:
+          name: target-artifacts-${matrix.os}
+          path: "*/target/reference/*.jar"
       - name: Maven "verify"
         timeout-minutes: 60
         shell: bash
