@@ -84,7 +84,7 @@ public class Interpolator extends AbstractConfigurationAwareLookup implements Lo
     }
 
     /**
-     * Used by interpolatrorFactory.
+     * Used by interpolatorFactory.
      *
      * @param defaultLookup The default Lookup.
      * @param strLookupPlugins The Lookup Plugins.

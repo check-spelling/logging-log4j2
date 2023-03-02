@@ -17,9 +17,6 @@
 package org.apache.logging.log4j.jul.test;
 
 //note: NO import of Logger, Level, LogManager to prevent conflicts JUL/log4j
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.ByteArrayOutputStream;
@@ -39,6 +36,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -90,7 +90,7 @@ public class Log4jBridgeHandlerTest {
         System.out.println("sysout:  logging-cfg-file:  " + System.getProperty("java.util.logging.config.file"));
         if (DEVTEST)  devTestBeforeClass();    // call before stderr capturing
 
-        // JUL does not like setting stderr inbetween, so set it once and reset collecting stream
+        // JUL does not like setting stderr in between, so set it once and reset collecting stream
         // for each method; (thus com.github.stefanbirkner:system-rules:SystemErrRule cannot be used)
         System.err.println("vvv--- BEGIN capturing output to stderr ---vvv"
                 + "   (do output of captured text to orig. stderr: " + OUTPUT_CAPTURED + ")");
@@ -372,7 +372,7 @@ public class Log4jBridgeHandlerTest {
 
 ////////////////
 ////////////////   INTERNAL DEVELOPER TESTS follow
-////////////////   (these are NOT neccessary for unit test but source is kept here for reference and info)
+////////////////   (these are NOT necessary for unit test but source is kept here for reference and info)
 
 
     static {

@@ -16,6 +16,11 @@
  */
 package org.apache.logging.log4j.core.appender.routing;
 
+import java.io.File;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import org.apache.logging.log4j.EventLogger;
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.test.appender.ListAppender;
@@ -27,11 +32,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.jupiter.api.Tag;
 import org.junit.rules.RuleChain;
-
-import java.io.File;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -57,7 +57,7 @@ public class RoutingAppenderWithPurgingTest {
 
     @Rule
     public RuleChain chain = loggerContextRule.withCleanFilesRule(IDLE_LOG_FILE1, IDLE_LOG_FILE2, IDLE_LOG_FILE3,
-    		MANUAL_LOG_FILE1, MANUAL_LOG_FILE2, MANUAL_LOG_FILE3);
+            MANUAL_LOG_FILE1, MANUAL_LOG_FILE2, MANUAL_LOG_FILE3);
 
 
     @Before
@@ -88,7 +88,7 @@ public class RoutingAppenderWithPurgingTest {
         EventLogger.logEvent(msg);
         // '2' is a referenced list appender
         final String[] files = {IDLE_LOG_FILE1, IDLE_LOG_FILE3, MANUAL_LOG_FILE1, MANUAL_LOG_FILE3};
-        assertFileExistance(files);
+        assertFileExistence(files);
         Set<String> expectedAppenderKeys = new HashSet<>(2);
         expectedAppenderKeys.add("1");
         expectedAppenderKeys.add("3");
@@ -129,7 +129,7 @@ public class RoutingAppenderWithPurgingTest {
     }
 
 
-    private void assertFileExistance(final String... files) {
+    private void assertFileExistence(final String... files) {
         for (final String file : files) {
             assertTrue("File should exist - " + file + " file ", new File(file).exists());
         }

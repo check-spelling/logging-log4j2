@@ -16,6 +16,14 @@
  */
 package org.apache.logging.log4j.core.appender.routing;
 
+import java.util.Collections;
+import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.apache.logging.log4j.core.Appender;
 import org.apache.logging.log4j.core.Filter;
 import org.apache.logging.log4j.core.LogEvent;
@@ -32,14 +40,6 @@ import org.apache.logging.log4j.plugins.Node;
 import org.apache.logging.log4j.plugins.Plugin;
 import org.apache.logging.log4j.plugins.PluginElement;
 import org.apache.logging.log4j.plugins.PluginFactory;
-
-import java.util.Collections;
-import java.util.Map;
-import java.util.Objects;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * This Appender "routes" between various Appenders, some of which can be references to
@@ -58,7 +58,7 @@ public final class RoutingAppender extends AbstractAppender {
     public static class Builder<B extends Builder<B>> extends AbstractAppender.Builder<B>
             implements org.apache.logging.log4j.plugins.util.Builder<RoutingAppender> {
 
-        // Does not work unless the element is called "Script", I wanted "DefaultRounteScript"...
+        // Does not work unless the element is called "Script", I wanted "DefaultRouteScript"...
         @PluginElement("Script")
         private Script defaultRouteScript;
 

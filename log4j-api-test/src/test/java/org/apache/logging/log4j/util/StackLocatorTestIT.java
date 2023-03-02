@@ -44,7 +44,7 @@ public class StackLocatorTestIT {
   public final SecurityManagerTestRule rule = new SecurityManagerTestRule(new TestSecurityManager());
 
   /**
-   * Always throws a SecurityException for any reques to create a new SecurityManager
+   * Always throws a SecurityException for any request to create a new SecurityManager
    */
   private static class TestSecurityManager extends SecurityManager {
     @Override

@@ -16,10 +16,6 @@
  */
 package org.apache.logging.slf4j;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
 import java.util.List;
 import java.util.Locale;
 
@@ -40,6 +36,10 @@ import org.slf4j.ext.EventLogger;
 import org.slf4j.ext.XLogger;
 import org.slf4j.ext.XLoggerFactory;
 import org.slf4j.spi.LocationAwareLogger;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
@@ -93,7 +93,7 @@ public class LoggerTest {
     }
 
     @Test
-    public void debugNoParms() {
+    public void debugNoParams() {
         logger.debug("Debug message {}");
         verify("List", "o.a.l.s.LoggerTest Debug message {} MDC{}" + Strings.LINE_SEPARATOR);
         logger.debug("Debug message {}", (Object[]) null);
@@ -105,7 +105,7 @@ public class LoggerTest {
 
 
     @Test
-    public void debugWithParms() {
+    public void debugWithParams() {
         logger.debug("Hello, {}", "World");
         verify("List", "o.a.l.s.LoggerTest Hello, World MDC{}" + Strings.LINE_SEPARATOR);
     }

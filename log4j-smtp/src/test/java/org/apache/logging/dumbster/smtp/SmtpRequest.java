@@ -6,7 +6,7 @@
  * (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
  *
- *	  http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,7 +14,6 @@
  * See the license for the specific language governing permissions and
  * limitations under the license.
  */
-
 package org.apache.logging.dumbster.smtp;
 
 import org.apache.logging.log4j.util.Strings;
@@ -73,7 +72,7 @@ public class SmtpRequest {
     /**
      * Execute the SMTP request returning a response. This method models the state transition table for the SMTP server.
      *
-     * @return reponse to the request
+     * @return response to the request
      */
     public SmtpResponse execute() {
         SmtpResponse response = null;

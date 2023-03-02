@@ -16,10 +16,6 @@
  */
 package org.apache.logging.log4j.core.tools.picocli;
 
-import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.IStyle;
-import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.Style;
-import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.Text;
-
 import java.io.File;
 import java.io.PrintStream;
 import java.lang.annotation.ElementType;
@@ -67,6 +63,10 @@ import java.util.TreeSet;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.regex.Pattern;
+
+import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.IStyle;
+import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.Style;
+import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.Text;
 
 import static java.util.Locale.ENGLISH;
 import static org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Column.Overflow.SPAN;
@@ -2355,7 +2355,7 @@ public class CommandLine {
         private void checkMaxArityExceeded(final Range arity, final int remainder, final Field field, final String[] values) {
             if (values.length <= remainder) { return; }
             final String desc = arity.max == remainder ? "" + remainder : arity + ", remainder=" + remainder;
-            throw new MaxValuesforFieldExceededException(CommandLine.this, optionDescription("", field, -1) +
+            throw new MaxValuesForFieldExceededException(CommandLine.this, optionDescription("", field, -1) +
                     " max number of values (" + arity.max + ") exceeded: remainder is " + remainder + " but " +
                     values.length + " values were specified: " + Arrays.toString(values));
         }
@@ -2896,14 +2896,14 @@ public class CommandLine {
         /** Optional heading preceding the footer section. Initialized from {@link Command#footerHeading()}, or null. */
         public String footerHeading;
 
-        /** Constructs a new {@code Help} instance with a default color scheme, initialized from annotatations
+        /** Constructs a new {@code Help} instance with a default color scheme, initialized from annotations
          * on the specified class and superclasses.
          * @param command the annotated object to create usage help for */
         public Help(final Object command) {
             this(command, Ansi.AUTO);
         }
 
-        /** Constructs a new {@code Help} instance with a default color scheme, initialized from annotatations
+        /** Constructs a new {@code Help} instance with a default color scheme, initialized from annotations
          * on the specified class and superclasses.
          * @param command the annotated object to create usage help for
          * @param ansi whether to emit ANSI escape codes or not */
@@ -2911,7 +2911,7 @@ public class CommandLine {
             this(command, defaultColorScheme(ansi));
         }
 
-        /** Constructs a new {@code Help} instance with the specified color scheme, initialized from annotatations
+        /** Constructs a new {@code Help} instance with the specified color scheme, initialized from annotations
          * on the specified class and superclasses.
          * @param command the annotated object to create usage help for
          * @param colorScheme the color scheme to use */
@@ -4306,7 +4306,7 @@ public class CommandLine {
                 @Override
                 public String off() { return CSI + endCode + "m"; }
 
-				/** Returns the concatenated ANSI escape codes for turning all specified styles on.
+                /** Returns the concatenated ANSI escape codes for turning all specified styles on.
                  * @param styles the styles to generate ANSI escape codes for
                  * @return the concatenated ANSI escape codes for turning all specified styles on */
                 public static String on(final IStyle... styles) {
@@ -4316,7 +4316,7 @@ public class CommandLine {
                     }
                     return result.toString();
                 }
-				/** Returns the concatenated ANSI escape codes for turning all specified styles off.
+                /** Returns the concatenated ANSI escape codes for turning all specified styles off.
                  * @param styles the styles to generate ANSI escape codes for
                  * @return the concatenated ANSI escape codes for turning all specified styles off */
                 public static String off(final IStyle... styles) {
@@ -4326,25 +4326,25 @@ public class CommandLine {
                     }
                     return result.toString();
                 }
-				/** Parses the specified style markup and returns the associated style.
-				 *  The markup may be one of the Style enum value names, or it may be one of the Style enum value
-				 *  names when {@code "fg_"} is prepended, or it may be one of the indexed colors in the 256 color palette.
+                /** Parses the specified style markup and returns the associated style.
+                 *  The markup may be one of the Style enum value names, or it may be one of the Style enum value
+                 *  names when {@code "fg_"} is prepended, or it may be one of the indexed colors in the 256 color palette.
                  * @param str the case-insensitive style markup to convert, e.g. {@code "blue"} or {@code "fg_blue"},
                  *          or {@code "46"} (indexed color) or {@code "0;5;0"} (RGB components of an indexed color)
-				 * @return the IStyle for the specified converter
-				 */
+                 * @return the IStyle for the specified converter
+                 */
                 public static IStyle fg(final String str) {
                     try { return Style.valueOf(str.toLowerCase(ENGLISH)); } catch (final Exception ignored) {}
                     try { return Style.valueOf("fg_" + str.toLowerCase(ENGLISH)); } catch (final Exception ignored) {}
                     return new Palette256Color(true, str);
                 }
-				/** Parses the specified style markup and returns the associated style.
-				 *  The markup may be one of the Style enum value names, or it may be one of the Style enum value
-				 *  names when {@code "bg_"} is prepended, or it may be one of the indexed colors in the 256 color palette.
-				 * @param str the case-insensitive style markup to convert, e.g. {@code "blue"} or {@code "bg_blue"},
+                /** Parses the specified style markup and returns the associated style.
+                 *  The markup may be one of the Style enum value names, or it may be one of the Style enum value
+                 *  names when {@code "bg_"} is prepended, or it may be one of the indexed colors in the 256 color palette.
+                 * @param str the case-insensitive style markup to convert, e.g. {@code "blue"} or {@code "bg_blue"},
                  *          or {@code "46"} (indexed color) or {@code "0;5;0"} (RGB components of an indexed color)
-				 * @return the IStyle for the specified converter
-				 */
+                 * @return the IStyle for the specified converter
+                 */
                 public static IStyle bg(final String str) {
                     try { return Style.valueOf(str.toLowerCase(ENGLISH)); } catch (final Exception ignored) {}
                     try { return Style.valueOf("bg_" + str.toLowerCase(ENGLISH)); } catch (final Exception ignored) {}
@@ -4800,9 +4800,9 @@ public class CommandLine {
         public UnmatchedArgumentException(final CommandLine commandLine, final List<String> args) { this(commandLine, "Unmatched argument" + (args.size() == 1 ? " " : "s ") + args); }
     }
     /** Exception indicating that more values were specified for an option or parameter than its {@link Option#arity() arity} allows. */
-    public static class MaxValuesforFieldExceededException extends ParameterException {
+    public static class MaxValuesForFieldExceededException extends ParameterException {
         private static final long serialVersionUID = 6536145439570100641L;
-        public MaxValuesforFieldExceededException(final CommandLine commandLine, final String msg) { super(commandLine, msg); }
+        public MaxValuesForFieldExceededException(final CommandLine commandLine, final String msg) { super(commandLine, msg); }
     }
     /** Exception indicating that an option for a single-value option field has been specified multiple times on the command line. */
     public static class OverwrittenOptionException extends ParameterException {

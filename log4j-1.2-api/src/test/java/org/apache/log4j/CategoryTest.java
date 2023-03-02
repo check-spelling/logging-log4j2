@@ -185,7 +185,7 @@ public class CategoryTest {
     }
 
     /**
-     * Test using a pre-existing Log4j 2 logger
+     * Test using a preexisting Log4j 2 logger
      */
     @Test
     public void testExistingLog4j2Logger() {

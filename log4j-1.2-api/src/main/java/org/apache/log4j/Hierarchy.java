@@ -256,7 +256,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Override
     public Enumeration getCurrentLoggers() {
-        // The accumlation in v is necessary because not all elements in
+        // The accumulation in v is necessary because not all elements in
         // ht are Logger objects as there might be some ProvisionNodes
         // as well.
 //        final Vector v = new Vector(ht.size());
@@ -356,7 +356,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
 
     /**
      * This method will return <code>true</code> if this repository is disabled for <code>level</code> object passed as
-     * parameter and <code>false</code> otherwise. See also the {@link #setThreshold(Level) threshold} emthod.
+     * parameter and <code>false</code> otherwise. See also the {@link #setThreshold(Level) threshold} method.
      */
     @Override
     public boolean isDisabled(final int level) {
@@ -368,7 +368,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Deprecated
     public void overrideAsNeeded(final String override) {
-        LogLog.warn("The Hiearchy.overrideAsNeeded method has been deprecated.");
+        LogLog.warn("The Hierarchy.overrideAsNeeded method has been deprecated.");
     }
 
     /**
@@ -427,7 +427,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
      */
     @Deprecated
     public void setDisableOverride(final String override) {
-        LogLog.warn("The Hiearchy.setDisableOverride method has been deprecated.");
+        LogLog.warn("The Hierarchy.setDisableOverride method has been deprecated.");
     }
 
     /**
@@ -573,7 +573,7 @@ public class Hierarchy implements LoggerRepository, RendererSupport, ThrowableRe
 
         // System.out.println("UpdateParents called for " + name);
 
-        // if name = "w.x.y.z", loop thourgh "w.x.y", "w.x" and "w", but not "w.x.y.z"
+        // if name = "w.x.y.z", loop through "w.x.y", "w.x" and "w", but not "w.x.y.z"
         for (int i = name.lastIndexOf('.', length - 1); i >= 0; i = name.lastIndexOf('.', i - 1)) {
             final String substr = name.substring(0, i);
 

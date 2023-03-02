@@ -33,7 +33,7 @@ import org.apache.logging.log4j.util.StringBuilders;
 public class ReusableParameterizedMessage implements ReusableMessage, ParameterVisitable {
 
     private static final int MIN_BUILDER_SIZE = 512;
-    private static final int MAX_PARMS = 10;
+    private static final int MAX_PARAMS = 10;
     private ThreadLocal<StringBuilder> buffer; // non-static: LOG4J2-1583
 
     private String messagePattern;
@@ -41,7 +41,7 @@ public class ReusableParameterizedMessage implements ReusableMessage, ParameterV
     private int usedCount;
     private final int[] indices = new int[256];
     private Object[] varargs;
-    private Object[] params = new Object[MAX_PARMS];
+    private Object[] params = new Object[MAX_PARAMS];
     private Throwable throwable;
     boolean reserved = false; // LOG4J2-1583 prevent scrambled logs with nested logging calls
 
@@ -65,7 +65,7 @@ public class ReusableParameterizedMessage implements ReusableMessage, ParameterV
         Object[] result;
         if (varargs == null) {
             result = params;
-            if (emptyReplacement.length >= MAX_PARMS) {
+            if (emptyReplacement.length >= MAX_PARAMS) {
                 params = emptyReplacement;
             } else {
                 // Bad replacement! Too small, may blow up future 10-arg messages.
@@ -79,7 +79,7 @@ public class ReusableParameterizedMessage implements ReusableMessage, ParameterV
                     result = emptyReplacement;
                 } else {
                     // replacement array is too small for current content and future content: discard it
-                    params = new Object[MAX_PARMS];
+                    params = new Object[MAX_PARAMS];
                 }
             }
         } else {

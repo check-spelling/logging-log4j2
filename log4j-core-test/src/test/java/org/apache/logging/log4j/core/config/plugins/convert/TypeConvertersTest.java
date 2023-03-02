@@ -14,19 +14,7 @@
  * See the license for the specific language governing permissions and
  * limitations under the license.
  */
-
 package org.apache.logging.log4j.core.config.plugins.convert;
-
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.core.Filter;
-import org.apache.logging.log4j.core.appender.rolling.action.Duration;
-import org.apache.logging.log4j.core.layout.GelfLayout;
-import org.apache.logging.log4j.core.net.Facility;
-import org.apache.logging.log4j.plugins.di.DI;
-import org.apache.logging.log4j.plugins.di.Injector;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -43,6 +31,17 @@ import java.security.Security;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.UUID;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.core.Filter;
+import org.apache.logging.log4j.core.appender.rolling.action.Duration;
+import org.apache.logging.log4j.core.layout.GelfLayout;
+import org.apache.logging.log4j.core.net.Facility;
+import org.apache.logging.log4j.plugins.di.DI;
+import org.apache.logging.log4j.plugins.di.Injector;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -178,10 +177,10 @@ public class TypeConvertersTest {
                 { "\t", Object.class, Object.class.getName(), Class.class },
                 { "\n", null, null, Class.class },
                 // JRE URL
-                { "http://locahost", new URL("http://locahost"), null, URL.class },
+                { "http://localhost", new URL("http://localhost"), null, URL.class },
                 { "\n", null, null, URL.class },
                 // JRE URI
-                { "http://locahost", new URI("http://locahost"), null, URI.class },
+                { "http://localhost", new URI("http://localhost"), null, URI.class },
                 { "\n", null, null, URI.class },
                 // JRE BigInteger
                 { "9223372036854775817000", new BigInteger("9223372036854775817000"), null, BigInteger.class },

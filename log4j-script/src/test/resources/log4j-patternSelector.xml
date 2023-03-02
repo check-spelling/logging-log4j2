@@ -46,7 +46,7 @@
         <ScriptPatternSelector defaultPattern="[%-5level] %c{1.} %C{1.}.%M.%L %msg%n">
           <Script name="JavaScriptSelector" language="JavaScript"><![CDATA[
             var result;
-            if (logEvent.getLoggerName().equals("JavascriptNoLocation")) {
+            if (logEvent.getLoggerName().equals("JavaScriptNoLocation")) {
                 result = "NoLocation";
             } else if (logEvent.getMarker() != null && logEvent.getMarker().isInstanceOf("FLOW")) {
                 result = "Flow";
@@ -64,7 +64,7 @@
     <Logger name="TestJavaScriptPatternSelector" level="trace" additivity="false">
       <AppenderRef ref="List3"/>
     </Logger>
-    <Logger name="JavascriptNoLocation" level="trace" additivity="false">
+    <Logger name="JavaScriptNoLocation" level="trace" additivity="false">
       <AppenderRef ref="List3"/>
     </Logger>
     <Logger name="TestScriptPatternSelector" level="trace" additivity="false">

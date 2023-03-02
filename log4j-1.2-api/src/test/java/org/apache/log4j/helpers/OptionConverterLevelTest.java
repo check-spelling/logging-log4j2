@@ -14,14 +14,7 @@
  * See the license for the specific language governing permissions and
  * limitations under the license.
  */
-
 package org.apache.log4j.helpers;
-
-import static org.apache.log4j.helpers.OptionConverter.toLog4j1Level;
-import static org.apache.log4j.helpers.OptionConverter.toLog4j2Level;
-import static org.junit.Assert.assertNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -35,6 +28,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import static org.apache.log4j.helpers.OptionConverter.toLog4j1Level;
+import static org.apache.log4j.helpers.OptionConverter.toLog4j2Level;
+import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class OptionConverterLevelTest {
 
     static Stream<Arguments> standardLevels() {
@@ -45,7 +44,7 @@ public class OptionConverterLevelTest {
 
     /**
      * Test if the standard levels are transformed correctly.
-     * 
+     *
      * @param log4j1Level
      * @param log4j2Level
      */
@@ -58,7 +57,7 @@ public class OptionConverterLevelTest {
 
     /**
      * Test if the conversion works at an integer level.
-     * 
+     *
      * @param log4j1Level
      * @param log4j2Level
      */
@@ -116,7 +115,7 @@ public class OptionConverterLevelTest {
         assertEquals(expectedLevel, v1Level.toInt());
         // convertLevel
         assertEquals(v1Level, OptionConverter.convertLevel(v2Level));
-        // Non-existent level
+        // Nonexistent level
         assertNull(OptionConverter.toLevel("WARN_INFO#" + org.apache.logging.log4j.Level.class.getName(), null));
     }
 

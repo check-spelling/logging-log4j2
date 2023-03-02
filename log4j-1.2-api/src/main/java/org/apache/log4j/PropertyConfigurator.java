@@ -245,12 +245,12 @@ public class PropertyConfigurator implements Configurator {
     }
 
     void configureRootCategory(final Properties properties, final LoggerRepository loggerRepository) {
-        String effectiveFrefix = ROOT_LOGGER_PREFIX;
+        String effectivePrefix = ROOT_LOGGER_PREFIX;
         String value = OptionConverter.findAndSubst(ROOT_LOGGER_PREFIX, properties);
 
         if (value == null) {
             value = OptionConverter.findAndSubst(ROOT_CATEGORY_PREFIX, properties);
-            effectiveFrefix = ROOT_CATEGORY_PREFIX;
+            effectivePrefix = ROOT_CATEGORY_PREFIX;
         }
 
         if (value == null) {
@@ -258,7 +258,7 @@ public class PropertyConfigurator implements Configurator {
         } else {
             final Logger root = loggerRepository.getRootLogger();
             synchronized (root) {
-                parseCategory(properties, root, effectiveFrefix, INTERNAL_ROOT_NAME, value);
+                parseCategory(properties, root, effectivePrefix, INTERNAL_ROOT_NAME, value);
             }
         }
     }
@@ -519,7 +519,7 @@ public class PropertyConfigurator implements Configurator {
             }
         }
 
-        // sort filters by IDs, insantiate filters, set filter options,
+        // sort filters by IDs, instantiate filters, set filter options,
         // add filters to the appender
         final Enumeration g = new SortedKeyEnumeration(filters);
         Filter head = null;

@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
 import javax.management.JMException;
 import javax.management.JMX;
 import javax.management.MBeanServerConnection;
@@ -178,8 +177,8 @@ public class Client {
         if (!isLoggerContext(loggerContextObjName)) {
             throw new IllegalArgumentException("Not a LoggerContext: " + loggerContextObjName);
         }
-        final String cxtName = loggerContextObjName.getKeyProperty("type");
-        final String name = String.format(StatusLoggerAdminMBean.PATTERN, cxtName);
+        final String ctxName = loggerContextObjName.getKeyProperty("type");
+        final String name = String.format(StatusLoggerAdminMBean.PATTERN, ctxName);
         try {
             return new ObjectName(name);
         } catch (final MalformedObjectNameException ex) {

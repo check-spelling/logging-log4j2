@@ -46,7 +46,7 @@ import static org.junit.Assert.assertNotNull;
 
 /**
  * JUnit {@link TestRule} for constructing a new LoggerContext using a specified configuration file. If the system
- * property {@code EBUG} is set (e.g., through the command line option {@code -DEBUG}), then the StatusLogger will be
+ * property {@code -DEBUG} is set (e.g., through the command line option {@code -DEBUG}), then the StatusLogger will be
  * set to the debug level. This allows for more debug messages as the StatusLogger will be in the error level until a
  * configuration file has been read and parsed into a tree of Nodes.
  *

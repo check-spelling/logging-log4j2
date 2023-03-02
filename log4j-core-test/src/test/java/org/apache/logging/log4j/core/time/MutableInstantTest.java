@@ -16,11 +16,11 @@
  */
 package org.apache.logging.log4j.core.time;
 
-import org.apache.logging.log4j.core.time.internal.FixedPreciseClock;
-import org.junit.jupiter.api.Test;
-
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+
+import org.apache.logging.log4j.core.time.internal.FixedPreciseClock;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,7 +35,7 @@ class MutableInstantTest {
         assertEquals(123, instant.getEpochSecond(), "returns directly set value");
 
         instant.initFromEpochMilli(123456, 789012);
-        assertEquals(123, instant.getEpochSecond(), "returns converted value when initialized from milllis");
+        assertEquals(123, instant.getEpochSecond(), "returns converted value when initialized from millis");
 
         MutableInstant other = new MutableInstant();
         other.initFromEpochSecond(788, 456);
@@ -53,7 +53,7 @@ class MutableInstantTest {
         assertEquals(456, instant.getNanoOfSecond(), "returns directly set value");
 
         instant.initFromEpochMilli(123456, 789012);
-        assertEquals(456789012, instant.getNanoOfSecond(), "returns converted value when initialized from milllis");
+        assertEquals(456789012, instant.getNanoOfSecond(), "returns converted value when initialized from millis");
 
         MutableInstant other = new MutableInstant();
         other.initFromEpochSecond(788, 456);
@@ -89,7 +89,7 @@ class MutableInstantTest {
         assertEquals(456, instant.getNanoOfMillisecond(), "returns directly set value");
 
         instant.initFromEpochSecond(123, 456789012);
-        assertEquals(789012, instant.getNanoOfMillisecond(), "returns converted value when initialized from milllis");
+        assertEquals(789012, instant.getNanoOfMillisecond(), "returns converted value when initialized from millis");
 
         MutableInstant other = new MutableInstant();
         other.initFromEpochMilli(788, 456);

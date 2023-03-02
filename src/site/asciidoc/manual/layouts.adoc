@@ -238,7 +238,7 @@ are also specified this attribute will be ignored.
 
 |mapMessageIncludes
 |String
-|A comma separated list of attributes from the MapMessageto include when formatting the event. This
+|A comma separated list of attributes from the MapMessage to include when formatting the event. This
 attribute only applies when includeMapMessage="true" is specified. If mapMessageExcludes
 are also specified this attribute will override them. MapMessage fields specified here that
 have no value will be omitted.
@@ -375,7 +375,7 @@ Configure as follows to use dataPattern and timezone in HtmlLayout:
 [#JSONLayout]
 == JSON Layout
 
-**Note:** JsonTemplate is considered deprecated. JsonTemplateLayout provides more capabilitites and
+**Note:** JsonTemplate is considered deprecated. JsonTemplateLayout provides more capabilities and
 should be used instead.
 
 Appends a series of JSON events as strings serialized as bytes.
@@ -1906,11 +1906,11 @@ the pattern specified on that PatternMatch element will be used.
 [#ScriptPatternSelector]
 ==== ScriptPatternSelector
 
-The ScriptPatternSelector executes a script as descibed in the
+The ScriptPatternSelector executes a script as described in the
 link:../configuration.html#Scripts[Scripts] section of the Configuration
 chapter. The script is passed all the properties configured in the
 Properties section of the configuration, the StrSubstitutor used by the
-Confguration in the "substitutor" variables, and the log event in the
+Configuration in the "substitutor" variables, and the log event in the
 "logEvent" variable, and is expected to return the value of the
 PatternMatch key that should be used, or null if the default pattern
 should be used.

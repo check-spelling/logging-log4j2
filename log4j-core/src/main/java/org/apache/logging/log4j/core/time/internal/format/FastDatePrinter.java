@@ -849,7 +849,7 @@ public class FastDatePrinter implements DatePrinter {
         private final int mField;
 
         /**
-         * Constructs an instance of {@code UnpadedNumberField} with the specified field.
+         * Constructs an instance of {@code UnpaddedNumberField} with the specified field.
          *
          * @param field the field
          */

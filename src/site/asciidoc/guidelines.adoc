@@ -334,7 +334,7 @@ When a specific change to the software is proposed for discussion or
 voting on the mailing list, it should be presented in the form of input
 to the patch command. When sent to the mailing list, the message should
 contain a Subject beginning with `[PATCH]` and a distinctive one-line
-summary corresponding to the action item for that patch. Afterwords, the
+summary corresponding to the action item for that patch. Afterwards, the
 patch summary in the STATUS file should be updated to point to the
 Message-ID of that message.
 

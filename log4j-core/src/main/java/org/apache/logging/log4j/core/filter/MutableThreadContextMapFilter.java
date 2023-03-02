@@ -221,7 +221,7 @@ public class MutableThreadContextMapFilter extends AbstractFilter {
         }
 
         /**
-         * Set the frequency in seconds that changes to the list a ThreadContext valudes should be
+         * Set the frequency in seconds that changes to the list a ThreadContext values should be
          * checked.
          * @param pollInterval interval in seconds to check the file for changes.
          * @return this.

@@ -23,7 +23,7 @@ import java.time.temporal.TemporalUnit;
 enum TimeUnit {
     NANOS("ns,nano,nanos,nanosecond,nanoseconds", ChronoUnit.NANOS),
     MICROS("us,micro,micros,microsecond,microseconds", ChronoUnit.MICROS),
-    MILLIS("ms,milli,millis,millsecond,milliseconds", ChronoUnit.MILLIS),
+    MILLIS("ms,milli,millis,millisecond,milliseconds", ChronoUnit.MILLIS),
     SECONDS("s,second,seconds", ChronoUnit.SECONDS),
     MINUTES("m,minute,minutes", ChronoUnit.MINUTES),
     HOURS("h,hour,hours", ChronoUnit.HOURS),

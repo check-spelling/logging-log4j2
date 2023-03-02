@@ -31,7 +31,7 @@ import org.junitpioneer.jupiter.SetSystemProperty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "bsh, Javascript")
+@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "bsh, JavaScript")
 @LoggerContextSource(value = "log4j-patternSelector.xml", reconfigure = ReconfigurationPolicy.BEFORE_EACH)
 public class PatternSelectorTest {
 
@@ -77,7 +77,7 @@ public class PatternSelectorTest {
     @Test
     public void testJavaScriptPatternSelector(@Named("List3") final ListAppender app) {
         final org.apache.logging.log4j.Logger logger = LogManager.getLogger("TestJavaScriptPatternSelector");
-        final org.apache.logging.log4j.Logger logger2 = LogManager.getLogger("JavascriptNoLocation");
+        final org.apache.logging.log4j.Logger logger2 = LogManager.getLogger("JavaScriptNoLocation");
         logger.traceEntry();
         logger.info("Hello World");
         logger2.info("No location information");
@@ -92,7 +92,7 @@ public class PatternSelectorTest {
         expect = "[INFO ] TestJavaScriptPatternSelector " +
                 "o.a.l.l.s.l.PatternSelectorTest.testJavaScriptPatternSelector.82 Hello World" + Strings.LINE_SEPARATOR;
         assertEquals(expect, messages.get(1));
-        assertEquals("[INFO ] JavascriptNoLocation No location information" + Strings.LINE_SEPARATOR, messages.get(2));
+        assertEquals("[INFO ] JavaScriptNoLocation No location information" + Strings.LINE_SEPARATOR, messages.get(2));
         app.clear();
     }
 }

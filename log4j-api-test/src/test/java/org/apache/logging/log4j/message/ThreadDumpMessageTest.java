@@ -16,11 +16,11 @@
  */
 package org.apache.logging.log4j.message;
 
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.ReentrantLock;
+
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -63,7 +63,7 @@ public class ThreadDumpMessageTest {
         assertTrue(message.contains("RUNNABLE"), "No RUNNABLE");
         assertTrue(message.contains("ThreadDumpMessage"), "No ThreadDumpMessage");
         //assertTrue("No Locks", message.contains("waiting on"));
-        //assertTrue("No syncronizers", message.contains("locked syncrhonizers"));
+        //assertTrue("No synchronizers", message.contains("locked synchronizers"));
     }
 
     @Test

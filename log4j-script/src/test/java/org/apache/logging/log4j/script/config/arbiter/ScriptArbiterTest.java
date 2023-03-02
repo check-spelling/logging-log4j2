@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Tests basic condition processing.
  */
-@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "Groovy, Javascript")
+@SetSystemProperty(key = ScriptManagerFactoryImpl.SCRIPT_LANGUAGES, value = "Groovy, JavaScript")
 public class ScriptArbiterTest {
 
     static final String CONFIG = "log4j2-scriptArbiters.xml";
